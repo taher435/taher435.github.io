@@ -1,0 +1,53 @@
+---
+layout: post
+title: Updating a column value and making them all of one length
+date: 2010-08-14 08:21:00.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- ASP.NET
+tags: []
+meta:
+  blogger_blog: tdtechdiary.blogspot.com
+  blogger_author: Taher Dhilawala
+  blogger_d55bd4009d1dee1a46eef7a078bee8f9_permalink: '2554365822429441199'
+  _edit_last: '14307922'
+  _wpas_skip_fb: '1'
+author:
+  login: tdtechdiary
+  email: salaam_taher@yahoo.com
+  display_name: Taher Dhilawala
+  first_name: ''
+  last_name: ''
+---
+<p>Today in office we had to run a job on a set of records given by client. The data was in form of an excel sheet which had some employee ids. We imported the data from excel to a table. We quickly found out that the employee ids in the excel sheet are not of the same length. For our job to run correctly it was required that all the values in the employee_id column be of length 8. As we were out of time, I quickly wrote 3 update statements to modify the employee id column. The update statements were as below,</p>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:blue;font-family:&quot;font-size:10pt;">UPDATE</span><span style="font-family:&quot;font-size:10pt;"> tbl_employee <span style="color:blue;">SET</span> emp_id<span style="color:grey;">=</span><span style="color:red;">'000'</span><span style="color:grey;">+</span>emp_id <span style="color:blue;">WHERE</span> <span style="color:magenta;">LEN</span><span style="color:grey;">(</span>emp_id<span style="color:grey;">)=</span>5</span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:blue;font-family:&quot;font-size:10pt;">GO</span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:blue;font-family:&quot;font-size:10pt;">UPDATE</span><span style="font-family:&quot;font-size:10pt;"> tbl_employee <span style="color:blue;">SET</span> emp_id<span style="color:grey;">=</span><span style="color:red;">'00'</span><span style="color:grey;">+</span>emp_id <span style="color:blue;">WHERE</span> <span style="color:magenta;">LEN</span><span style="color:grey;">(</span>emp_id<span style="color:grey;">)=</span>6</span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:blue;font-family:&quot;font-size:10pt;">GO</span></div>
+<div class="MsoNormal"><span style="color:blue;font-family:&quot;font-size:10pt;line-height:115%;">UPDATE</span><span style="font-family:&quot;font-size:10pt;line-height:115%;"> tbl_employee <span style="color:blue;">SET</span> emp_id<span style="color:grey;">=</span><span style="color:red;">'0'</span><span style="color:grey;">+</span>emp_id <span style="color:blue;">WHERE</span> <span style="color:magenta;">LEN</span><span style="color:grey;">(</span>emp_id<span style="color:grey;">)=</span>7</span></div>
+<div class="MsoNormal"></div>
+<div class="MsoNormal"><span style="font-family:&quot;font-size:10pt;line-height:115%;">We had three types of employee ids with length 5,6 &amp; 7. It worked perfectly fine. But later I thought that this is not the right way to do. So I quickly did some findings and came up with a new single query which will do the job. Let me explain with an example,</span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:blue;font-family:&quot;font-size:10pt;">CREATE</span><span style="font-family:&quot;font-size:10pt;"> <span style="color:blue;">TABLE</span> tbl_employee<span style="color:grey;">(</span>emp_id <span style="color:blue;">varchar</span><span style="color:grey;">(</span>8<span style="color:grey;">),</span>emp_fname <span style="color:blue;">varchar</span><span style="color:grey;">(</span>25<span style="color:grey;">))</span></span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:blue;font-family:&quot;font-size:10pt;">GO</span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:green;font-family:&quot;font-size:10pt;">/* INSERT DUMMY VALUES */</span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:blue;font-family:&quot;font-size:10pt;">INSERT</span><span style="font-family:&quot;font-size:10pt;"> <span style="color:blue;">INTO</span> tbl_employee<span style="color:grey;">(</span>emp_id<span style="color:grey;">,</span>emp_fname<span style="color:grey;">)</span></span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:blue;font-family:&quot;font-size:10pt;">VALUES</span><span style="color:grey;font-family:&quot;font-size:10pt;">(</span><span style="color:red;font-family:&quot;font-size:10pt;">'12345'</span><span style="color:grey;font-family:&quot;font-size:10pt;">,</span><span style="color:red;font-family:&quot;font-size:10pt;">'EmpA'</span><span style="color:grey;font-family:&quot;font-size:10pt;">),(</span><span style="color:red;font-family:&quot;font-size:10pt;">'234567'</span><span style="color:grey;font-family:&quot;font-size:10pt;">,</span><span style="color:red;font-family:&quot;font-size:10pt;">'EmpB'</span><span style="color:grey;font-family:&quot;font-size:10pt;">),(</span><span style="color:red;font-family:&quot;font-size:10pt;">'3456789'</span><span style="color:grey;font-family:&quot;font-size:10pt;">,</span><span style="color:red;font-family:&quot;font-size:10pt;">'EmpC'</span><span style="color:grey;font-family:&quot;font-size:10pt;">),(</span><span style="color:red;font-family:&quot;font-size:10pt;">'0123'</span><span style="color:grey;font-family:&quot;font-size:10pt;">,</span><span style="color:red;font-family:&quot;font-size:10pt;">'EmpD'</span><span style="color:grey;font-family:&quot;font-size:10pt;">)</span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:blue;font-family:&quot;font-size:10pt;">GO</span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:green;font-family:&quot;font-size:10pt;">/* See values in tabels */</span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:blue;font-family:&quot;font-size:10pt;">SELECT</span><span style="font-family:&quot;font-size:10pt;"> <span style="color:grey;">*</span> <span style="color:blue;">FROM</span> tbl_employee</span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:blue;font-family:&quot;font-size:10pt;">GO</span></div>
+<div class="separator" style="clear:both;text-align:center;"><a style="clear:left;float:left;margin-bottom:1em;margin-right:1em;" href="http://tdtechdiary.files.wordpress.com/2010/08/12.png"><img src="{{ site.baseurl }}/assets/12.png?w=300" alt="" border="0" /></a></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:blue;font-family:&quot;font-size:10pt;"><br />
+</span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:blue;font-family:&quot;font-size:10pt;"><br />
+</span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:green;font-family:&quot;font-size:10pt;">/* We want to update all the emp_id so that all are of lenght 8 */</span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:blue;font-family:&quot;font-size:10pt;">UPDATE</span><span style="font-family:&quot;font-size:10pt;"> tbl_employee <span style="color:blue;">SET</span> emp_id<span style="color:grey;">=RIGHT(</span><span style="color:red;">'00000000'</span><span style="color:grey;">+</span>emp_id<span style="color:grey;">,</span>8<span style="color:grey;">)</span></span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:blue;font-family:&quot;font-size:10pt;">GO</span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:green;font-family:&quot;font-size:10pt;">/* See the new values in tables */</span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:blue;font-family:&quot;font-size:10pt;">SELECT</span><span style="font-family:&quot;font-size:10pt;"> <span style="color:grey;">*</span> <span style="color:blue;">FROM</span> tbl_employee</span></div>
+<div class="MsoNormal"><span style="color:blue;font-family:&quot;font-size:10pt;line-height:115%;">GO</span></div>
+<div class="separator" style="clear:both;text-align:center;"><a style="clear:left;float:left;margin-bottom:1em;margin-right:1em;" href="http://tdtechdiary.files.wordpress.com/2010/08/22.png"><img src="{{ site.baseurl }}/assets/22.png?w=300" alt="" border="0" /></a></div>
+<div class="blogger-post-footer"></div>

@@ -1,0 +1,50 @@
+---
+layout: post
+title: 'SQL Server : Delete from table without primary key'
+date: 2010-08-08 12:35:00.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- SQL Server
+tags: []
+meta:
+  blogger_blog: tdtechdiary.blogspot.com
+  blogger_author: Taher Dhilawala
+  blogger_d55bd4009d1dee1a46eef7a078bee8f9_permalink: '6586763873550321301'
+  _edit_last: '14307922'
+  _wpas_skip_fb: '1'
+author:
+  login: tdtechdiary
+  email: salaam_taher@yahoo.com
+  display_name: Taher Dhilawala
+  first_name: ''
+  last_name: ''
+---
+<p>I have often seen this question being asked on many blogs and forums. So I thought of publishing it here.</p>
+<div class="MsoNormal" style="margin-bottom:.0001pt;"><strong>Question: </strong>If you have a table which has duplicate rows with no primary key then how would you delete the duplicate rows to keep only one copy of each row.</div>
+<div class="MsoNormal" style="margin-bottom:.0001pt;"><strong>Answer: </strong>Let’s look at it with an example,</div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:green;font-family:&quot;font-size:10pt;">/*CREATE A TABLE */</span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:blue;font-family:&quot;font-size:10pt;">CREATE</span><span style="font-family:&quot;font-size:10pt;"> <span style="color:blue;">TABLE</span> tbl_duplicate<span style="color:grey;">(</span>id <span style="color:blue;">int</span><span style="color:grey;">,</span>name <span style="color:blue;">varchar</span><span style="color:grey;">(</span>25<span style="color:grey;">))</span></span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:blue;font-family:&quot;font-size:10pt;">GO</span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:green;font-family:&quot;font-size:10pt;">/* INSERT DUPLICATE VALUES*/</span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:blue;font-family:&quot;font-size:10pt;">INSERT</span><span style="font-family:&quot;font-size:10pt;"> <span style="color:blue;">INTO</span> tbl_duplicate</span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:blue;font-family:&quot;font-size:10pt;">VALUES</span><span style="color:grey;font-family:&quot;font-size:10pt;">(</span><span style="font-family:&quot;font-size:10pt;">1<span style="color:grey;">,</span><span style="color:red;">'John'</span><span style="color:grey;">),(</span>2<span style="color:grey;">,</span><span style="color:red;">'Matt'</span><span style="color:grey;">),(</span>1<span style="color:grey;">,</span><span style="color:red;">'John'</span><span style="color:grey;">),(</span>2<span style="color:grey;">,</span><span style="color:red;">'Matt'</span><span style="color:grey;">),(</span>3<span style="color:grey;">,</span><span style="color:red;">'Taher'</span><span style="color:grey;">)</span></span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:blue;font-family:&quot;font-size:10pt;">GO</span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:green;font-family:&quot;font-size:10pt;">/* CHECK DUPLICATE VALUES */</span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:blue;font-family:&quot;font-size:10pt;">SELECT</span><span style="font-family:&quot;font-size:10pt;"> <span style="color:grey;">*</span> <span style="color:blue;">FROM</span> tbl_duplicate</span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:blue;font-family:&quot;font-size:10pt;">GO</span></div>
+<div class="separator" style="clear:both;text-align:center;"><a style="clear:left;float:left;margin-bottom:1em;margin-right:1em;" href="http://tdtechdiary.files.wordpress.com/2010/08/1.png"><img src="{{ site.baseurl }}/assets/1.png?w=260" alt="" border="0" /></a></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:green;font-family:&quot;font-size:10pt;">/* DELETE DUPLICATE VALUES */</span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:blue;font-family:&quot;font-size:10pt;">WITH</span><span style="font-family:&quot;font-size:10pt;"> CTE <span style="color:blue;">AS</span></span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:grey;font-family:&quot;font-size:10pt;">(</span></div>
+<div class="MsoNormal" style="line-height:normal;margin:0 0 .0001pt .5in;"><span style="color:blue;font-family:&quot;font-size:10pt;">SELECT</span><span style="font-family:&quot;font-size:10pt;"> <span style="color:magenta;">ROW_NUMBER</span><span style="color:grey;">()</span> <span style="color:blue;">over </span><span style="color:grey;">(</span><span style="color:blue;">PARTITION</span> <span style="color:blue;">by</span> id <span style="color:blue;">order</span> <span style="color:blue;">by</span> id<span style="color:grey;">)</span> <span style="color:blue;">as</span> [row_no]<span style="color:grey;">,</span>id<span style="color:grey;">,</span>name <span style="color:blue;">FROM</span> tbl_duplicate     </span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:grey;font-family:&quot;font-size:10pt;">)</span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:blue;font-family:&quot;font-size:10pt;">DELETE</span><span style="font-family:&quot;font-size:10pt;"> <span style="color:blue;">FROM</span> CTE <span style="color:blue;">WHERE</span> row_no <span style="color:grey;">&gt;</span> 1</span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:blue;font-family:&quot;font-size:10pt;">GO</span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:green;font-family:&quot;font-size:10pt;">/* CHECK THE VALUES IN TABLE */</span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:blue;font-family:&quot;font-size:10pt;">SELECT</span><span style="font-family:&quot;font-size:10pt;"> <span style="color:grey;">*</span> <span style="color:blue;">FROM</span> tbl_duplicate</span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:blue;font-family:&quot;font-size:10pt;">GO</span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><a style="clear:left;float:left;margin-bottom:1em;margin-right:1em;" href="http://tdtechdiary.files.wordpress.com/2010/08/2.png"><img src="{{ site.baseurl }}/assets/2.png?w=175" alt="" border="0" /></a><span style="font-family:&quot;font-size:10pt;"> </span></div>
+<div class="MsoNormal" style="line-height:normal;margin-bottom:.0001pt;"><span style="color:green;font-family:&quot;font-size:10pt;">/* CLEAN UP CODE */</span></div>
+<div class="MsoNormal" style="margin-bottom:.0001pt;"><span style="color:blue;font-family:&quot;font-size:10pt;line-height:115%;">DROP</span><span style="font-family:&quot;font-size:10pt;line-height:115%;"> <span style="color:blue;">TABLE</span> tbl_duplicate</span></div>

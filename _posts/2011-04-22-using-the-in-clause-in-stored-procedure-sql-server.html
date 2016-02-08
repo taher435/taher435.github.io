@@ -1,0 +1,53 @@
+---
+layout: post
+title: Using the IN Clause in Stored procedure - SQL Server
+date: 2011-04-22 11:34:00.000000000 +08:00
+type: post
+permalink: using-in-clause-in-stored-procedure-sql-server
+
+tags: []
+meta:
+  _edit_last: '14307922'
+  blogger_blog: tdtechdiary.blogspot.com
+  blogger_author: Taher Dhilawala
+  blogger_d55bd4009d1dee1a46eef7a078bee8f9_permalink: '3665630331966378995'
+  _wpas_skip_fb: '1'
+  _wpas_done_twitter: '1'
+author:
+  login: tdtechdiary
+  email: salaam_taher@yahoo.com
+  display_name: Taher Dhilawala
+  first_name: ''
+  last_name: ''
+---
+<p style="margin:0 0 10pt;">Yesterday, a junior developer came to me and told me that he converted a Stored Procedure to inline query because he was not able fetch data using the 'IN' clause from stored procedure. Let me demonstrate the problem using an example,</p>
+<p style="margin:0 0 10pt;">Let us first create a temporary table and create a stored procedure</p>
+<p style="line-height:normal;margin:0;"><img src="{{ site.baseurl }}/assets/zrclip_007p5d134769.png" style="width:580px;height:204px;" height="278" width="821" /></p>
+<p style="line-height:normal;margin:0;">The requirement was something like this,</p>
+<p style="line-height:normal;margin:0;"><img src="{{ site.baseurl }}/assets/zrclip_008p6986d8e1.png" height="59" width="504" /></p>
+<p style="line-height:normal;margin:0;">
+<p style="margin:0 0 10pt;"><img src="{{ site.baseurl }}/assets/zrclip_004n496661a0.png" height="90" width="202" /></p>
+<p style="margin:0 0 10pt;">
+<p style="margin:0 0 10pt;">But when used with stored procedure, it was not returning any records (see below)</p>
+<p style="margin:0 0 10pt;"><img src="{{ site.baseurl }}/assets/zrclip_009n4ffd399a.png" style="width:540px;height:79px;" height="85" width="694" /></p>
+<p style="line-height:normal;margin:0 0 10pt;">
+<p style="line-height:normal;margin:0 0 10pt;">
+<p style="line-height:normal;margin:0;"><strong><img src="{{ site.baseurl }}/assets/zrclip_005p7b9a068f.png" height="188" width="273" /></strong></p>
+<p style="line-height:normal;margin:0;">
+<p style="margin:0 0 10pt;"><strong>Solution</strong></p>
+<p style="margin:0 0 10pt;">Creating a function,</p>
+<p style="margin:0 0 10pt;"><img src="{{ site.baseurl }}/assets/zrclip_010pd263b49.png" style="width:644px;height:319px;" height="416" width="964" /></p>
+<p style="line-height:normal;margin:0 0 10pt;">
+<p style="line-height:normal;margin:0;">Altering the same stored procedure which we created earlier to use the function</p>
+<p style="line-height:normal;margin:0;">
+<p style="line-height:normal;margin:0;"><img src="{{ site.baseurl }}/assets/zrclip_011p28462153.png" style="width:549px;height:164px;" height="187" width="747" /></p>
+<p style="line-height:normal;margin:0;">
+<p style="margin:0 0 10pt;">
+<p>The output,</p>
+<p style="line-height:normal;margin:0;">--Run the same procedure again</p>
+<p style="margin:0 0 10pt;">usp_select_details 'A1,A3,A5'</p>
+<p style="margin:0 0 10pt;">
+<p style="margin:0 0 10pt;"><img src="{{ site.baseurl }}/assets/zrclip_006n38ab2771.png" height="100" width="226" /></p>
+<p style="margin:0 0 10pt;">Clean up code,</p>
+<p style="line-height:normal;margin:0;">
+<p style="margin:0 0 10pt;"><img src="{{ site.baseurl }}/assets/zrclip_012n31086c02.png" height="118" width="274" /></p>

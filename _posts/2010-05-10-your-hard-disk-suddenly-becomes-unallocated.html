@@ -1,0 +1,26 @@
+---
+layout: post
+title: Your hard disk suddenly becomes unallocated ????
+date: 2010-05-10 22:26:00.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Windows 7
+tags: []
+meta:
+  blogger_blog: tdtechdiary.blogspot.com
+  blogger_author: Taher Dhilawala
+  blogger_d55bd4009d1dee1a46eef7a078bee8f9_permalink: '2704575773062559440'
+  _edit_last: '14307922'
+  _wpas_skip_fb: '1'
+author:
+  login: tdtechdiary
+  email: salaam_taher@yahoo.com
+  display_name: Taher Dhilawala
+  first_name: ''
+  last_name: ''
+---
+<p>Yesterday I booted my computer and was shock to see that my 160 GB secondary drive is not showing up in My Computer. I went to Administrative Tools &gt; Computer Management &gt; Disk Management (my OS being Windows XP - SP 2), I saw that my hard disk is shown as. I quickly Google about the problem and found a solution. A software called Testdisk. I downloaded the software and executed it step by step and finally recovered my hard drive. After being a quite relaxed I thought finding the root cause of the problem. Well, I did not get much information related to it. Whatever i got was a bit complex :(. So I thought of writing it down on my own blog in a simple way :).</p>
+<div class="MsoNormal" style="text-align:justify;"> Every hard disk has a File Allocation Table (FAT, do not confuse with FAT-32) which acts like a Meta data for the Operating system. It stores the details about the partition on the hard disk and also about the Starting and ending memory address of each partition. It also stores some extra information such as free / used space. Operating system just reads this Meta data in the hard drive and displays in the Explorer. So when your FAT gets deleted from your hard disk (due to power failure etc.) your operating system cannot recognize your hard disk. So it will display it as "Unallocated Space". Softwares like Testdisk just recover the FAT in the hard drive and bring it back to life :)</div>
+<div class="blogger-post-footer"></div>

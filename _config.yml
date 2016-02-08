@@ -1,0 +1,37 @@
+# Permalinks
+permalink:           pretty
+
+# Setup
+title:               Taher Dhilawala
+tagline:
+url:                 http://taher.me
+paginate:            1
+baseurl:             ""
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+# About/contact
+author:
+  name:              Taher Dhilawala
+  url:               http://taher.me
+  email:             taher435@gmail.com
+
+# Custom vars
+version:             2.0.0
+github:
+  repo:              https://github.com/taher435/taher.me
+
+# Gems
+gems:
+  - jekyll-paginate
+  - jekyll-gist
+
+pages_list:
+  About: '/about'
+  Archive: '/archive'
+  Feed: '/atom.xml'
