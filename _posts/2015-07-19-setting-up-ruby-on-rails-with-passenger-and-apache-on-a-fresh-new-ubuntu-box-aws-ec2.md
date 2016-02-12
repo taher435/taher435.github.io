@@ -5,7 +5,7 @@ date: 2015-07-19 22:16:39.000000000 +08:00
 type: post
 published: true
 status: publish
-categories: ruby
+categories: [ruby on rails, apache, rvm]
 permalink: setting-up-ruby-on-rails-with-passenger-and-apache-on-ubuntu
 ---
 <p>I've been setting up multiple Ubuntu machines from past 1 year and so writing down the steps that I have compiled after hours of frustration and research.</p>

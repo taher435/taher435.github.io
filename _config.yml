@@ -1,35 +1,64 @@
+# Harmony Jekyll theme general configurations
+
+# Base URL
+baseurl: /
+
+# Site live URL
+url: http://taher.me
+
+# Localhost
+#url: http://localhost:4000
+
+# Harmony theme configuration. Please change accordingly.
+harmony:
+  name: Taher Dhilawala
+  # Little description about your site
+  description: Full stack web and mobile developer.
+  # 'meta_description:' Write an awesome description for your new site here.
+  # It will appear in your document head meta (for Google search results) and
+  # in your feed.xml site description.
+  meta_description: > #
+   Taher is a full stack web and mobile developer. A start up enthusiast.
+   He has around 8 years of experience working with various technology stack.
+  basetheme: theme-base-01 # pre defined thmes are darken, blue-water, redish.
+  author: # Author details
+    name: Taher Dhilawala
+    #email:
+    url: http://taher435.github.io
+
+  # Google Analytics key, leave blank to ignore
+  google_analytics_key: UA-73710862-1
+
+  # Profile links, leave blank to ignore
+  social:
+    linkedin: https://sg.linkedin.com/in/tahernd
+    github: taher435
+    twitter: taher435
+    #facebook: gayanvirajith
+    #gplus: +GayanVirajith
+    #dribble: gayan
+    #pinterest:
+  # Toggle disclaimer in footer
+  show_disclaimer: false
+
+# Conversion / Build settings
+markdown:    kramdown
+# This is how you put pygments config in jekyll 2.0 instead of pygments: true
+highlighter: pygments
+
 # Permalinks
-permalink:           pretty
+permalink:        pretty
 
-# Setup
-title:               Taher Dhilawala
-tagline:
-url:                 http://taher.me
-paginate:            1
-baseurl:             ""
+exclude:
+  - CNAME
+  - Gemfile
+  - Rakefile
+  - README.md
+  - .gitignore
+  - .sass-cache
+  - Gemfile.lock
 
-# Assets
-#
-# We specify the directory for Jekyll so we can use @imports.
+# Sass conversion configs
 sass:
-  sass_dir:          _sass
-  style:            :compressed
-
-# About/contact
-author:
-  name:              Taher Dhilawala
-  url:               http://taher.me
-  email:             taher435@gmail.com
-
-# Custom vars
-version:             2.0.0
-github:
-  repo:              https://github.com/taher435/taher.me
-
-# Gems
-gems:
-  - jekyll-paginate
-  - jekyll-gist
-
-pages_list:
-  About: '/about'
+    sass_dir: assets/css/_sass
+    style: :compressed

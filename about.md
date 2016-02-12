@@ -1,13 +1,25 @@
 ---
 layout: page
-title: About
+title: About me
+permalink: /about/
 ---
 
 I am a full stack web / mobile developer building applications for around **8 years** now. I work with,
 
-`Ruby on Rails`, `C#`, `NodeJS`, `AngularJS`, `Ionic`, `ASP.net MVC`, `HTML5`, `CSS3`, `JavaScript`
-`MongoDB`, `MySQL`, `MS SQL Server`
-`AWS`, `SoftLayer`, `Azure`, `Google Computer Engine`
+* Ruby on Rails
+* C#.net
+* NodeJS
+* AngularJS
+* Ionic (hybrid mobile app development)
+* ASP.net MVC
+* HTML 5
+* CSS3
+* JavaScript / jQuery
+* MongoDB
+* MySQL
+* MS SQL Server
+* Wordpress
+* AWS, SoftLayer, Azure, Google Compute Engine
 
 I am a start up enthusiast and love helping different technology start ups with,
 
@@ -18,6 +30,11 @@ I am a start up enthusiast and love helping different technology start ups with,
 
 I am currently working as a CTO at <a href="http://cialfogroup.com" target="_blank">CIALFO</a>. We are building a platform to make college application process easy, efficient and accessible.
 
-You can find more about me on <a href="https://sg.linkedin.com/in/tahernd" target="_blank">LinkedIn</a>. I occasionally answer questions (AMA) at <a href="https://wiselike.com/taher-dhilawala" target="_blank">WiseLike</a>.
+### Contact me
 
-You can view my resume <a href="http://bit.ly/taher-resume" target="_blank">here</a>
+Find me on  [LinkedIn][linkedIn] / [Twitter][Twitter] / [Github][github]. Ask me anything at [Wiselike][wiselike]
+
+[linkedIn]: https://sg.linkedin.com/in/tahernd
+[github]: https://github.com/taher435
+[twitter]: https://twitter.com/taher435
+[wiselike]: https://wiselike.com/taher-dhilawala
