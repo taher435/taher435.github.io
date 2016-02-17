@@ -18,7 +18,7 @@ I am a full stack web / mobile developer building applications for around **8 ye
 * MongoDB
 * MySQL
 * MS SQL Server
-* Wordpress
+* Wordpress, LocomotiveCMS
 * AWS, SoftLayer, Azure, Google Compute Engine
 
 I am a start up enthusiast and love helping different technology start ups with,
