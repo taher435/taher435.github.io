@@ -12,7 +12,7 @@ permalink: setting-up-ruby-on-rails-with-passenger-and-apache-on-ubuntu
 <p><strong>DISCLAIMER</strong> : There are steps like these on many blogs but they did not work for me (hence this list). The steps mentioned below may also not work for you.</p>
 
 1. `gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3`
-2. `=\curl -sSL https://get.rvm.io | bash -s`
+2. `\curl -sSL https://get.rvm.io | bash -s`
 3. `logout and login again (close the terminal and open it again)`
 4. type this on the terminal window : `source ~/.rvm/scripts/rvm`
 5. Check if RVM was installed properly, type : `rvm | head -n 1` (output should be "rvm is a function")
