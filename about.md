@@ -32,9 +32,10 @@ I am currently working as a CTO at <a href="http://cialfogroup.com" target="_bla
 
 ### Contact me
 
-Find me on  [LinkedIn][linkedIn] / [Twitter][Twitter] / [Github][github]. Ask me anything on [Wiselike][wiselike]
+Find me on  [LinkedIn][linkedIn] / [Twitter][Twitter] / [Github][github]. I occasionally write on [Medium][medium] as well Ask me anything on [Wiselike][wiselike]
 
 [linkedIn]: https://sg.linkedin.com/in/tahernd
 [github]: https://github.com/taher435
 [twitter]: https://twitter.com/taher435
 [wiselike]: https://wiselike.com/taher-dhilawala
+[medium]: https://medium.com/@taher
