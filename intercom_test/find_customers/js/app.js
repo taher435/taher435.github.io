@@ -22,9 +22,9 @@ findCustApp.controller("findCustController", ["$scope", function($scope){
     if(fc.customers && fc.customers.length > 0){
 
       $.each(fc.customers, function(index, customer){
-        var distanceFromBase = calculateGeoDistance(fromLat, fromLong, parseFloat(customer.latitude), parseFloat(customer.longitude));
-        if(distanceFromBase <= range){
-          try{
+        try{
+          var distanceFromBase = calculateGeoDistance(fromLat, fromLong, parseFloat(customer.latitude), parseFloat(customer.longitude));
+          if(distanceFromBase <= range){          
             fc.nearByCustomers.push({
               name: customer.name,
               user_id: customer.user_id,
