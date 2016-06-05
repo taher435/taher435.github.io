@@ -1,7 +1,6 @@
 # Intercom Test
 
 ##Problem : Flatten an Array
-- - -
 
 ### How to run the code
 
@@ -40,7 +39,6 @@ Execute:
 You can check the Ruby code here => [ArrayHelper.rb](http://taher.me/intercom_test/) 
 
 ##Problem : Find Customers
-- - - 
 
 Language Used : **JavaScript**
 
