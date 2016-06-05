@@ -24,7 +24,7 @@ findCustApp.controller("findCustController", ["$scope", function($scope){
       $.each(fc.customers, function(index, customer){
         try{
           var distanceFromBase = calculateGeoDistance(fromLat, fromLong, parseFloat(customer.latitude), parseFloat(customer.longitude));
-          if(distanceFromBase <= range){          
+          if(distanceFromBase <= range){
             fc.nearByCustomers.push({
               name: customer.name,
               user_id: customer.user_id,
@@ -32,11 +32,11 @@ findCustApp.controller("findCustController", ["$scope", function($scope){
               latitude: customer.latitude,
               longitude: customer.longitude
             });
-          }catch(e){
-            //skipping to next record if we find an invalid customer record
-            console.log("Error reading customer data. Object = " + JSON.stringify(customer));
-            //TODO: see how can we better log this and show error on screen.
           }
+        }catch(e){
+          //skipping to next record if we find an invalid customer record
+          console.log("Error reading customer data. Object = " + JSON.stringify(customer));
+          //TODO: see how can we better log this and show error on screen.
         }
       });
       fc.showListView();
