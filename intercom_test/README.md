@@ -2,7 +2,6 @@
 
 ##Problem : Flatten an Array
 
-### How to run the code
 
 Language used : **Ruby**
 
@@ -20,7 +19,7 @@ Prerequisite:
     $ gem install rspec
     ```
   
-Execute:
+Code Execution:
     
 1. Run the test
 
@@ -36,13 +35,13 @@ Execute:
     
 3. Follow instructions on the console
     
-You can check the Ruby code here => [ArrayHelper.rb](http://taher.me/intercom_test/) 
+You can check the Ruby code here => [ArrayHelper.rb](https://github.com/taher435/taher435.github.io/blob/master/intercom_test/flatten_array/array_helper.rb) 
 
 ##Problem : Find Customers
 
 Language Used : **JavaScript**
 
-You can find the JS code for calculating geo distances here => [geo_distance.js]()
+You can find the JS code for calculating geo distances here => [geo_distance.js](https://github.com/taher435/taher435.github.io/blob/master/intercom_test/find_customers/js/geo_distance.js)
 
 [Live demo](https://taher.me/intercom_test/find_customers)
 
