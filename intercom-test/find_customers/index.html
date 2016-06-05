@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <title>Intercom Test - Taher Dhilawala</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,500italic,700,700italic" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  </head>
+  <body>
+    <div class="container" ng-app = "findCustApp" ng-controller="findCustController as fc">
+      <h3>Intercom Test</h3>
+      <p> - By Taher Dhilawala</p>
+      <h4>Find Customers</h4>
+      <form name="findCustForm" id="findCustForm" class="nl-form" novalidate>
+        <div class="statement">
+          Find Customers from
+        </div>
+        <div class="statement">
+          <input type="text" ng-model = "fc.fileName" disabled />
+          <label class="btn">
+              Browse <input class="file-upload" name="fileCustomers" id="fileCustomers" type="file" file-upload required />
+          </label>
+          <input type="hidden" name="fileName" ng-model="fc.fileName" required />
+        </div>
+        <div class="statement">
+          Within <input type="text" name="rangeKms" id="rangeKms" ng-model="fc.rangeKms" required /> kms
+        </div>
+        <div class="statement">
+          From Latitude: <input type="number" name="baseLat" id="baseLat" ng-model="fc.baseLat" required/>
+          and Longitude: <input type="number" name="baseLong" id="baseLong" ng-model="fc.baseLong" required/>
+        </div>
+        <input type="button" class="btn" id="btnSubmit" ng-disabled="findCustForm.$invalid" ng-click="fc.getNearByCustomers()" value="Find"/>
+
+      </form>
+
+      <div class="result" ng-show = "fc.view != null && fc.nearByCustomers.length > 0" ng-cloak>
+        <p><b>Customers found = {{fc.nearByCustomers.length}}</b></p>
+        <ul class="pills">
+          <li ng-class="{active: fc.view == 'list'}"><a href="javascript:void(0)" ng-click="fc.showListView()">List View</a></li>
+          <li ng-class="{active: fc.view == 'map'}"><a href="javascript:void(0)" ng-click="fc.showMapView()">Map View</a></li>
+        </ul>
+
+        <div id="listView" ng-show = "fc.view == 'list'">
+          <customer-details near-by-customers="fc.nearByCustomers"></customer-details>
+        </div>
+        <div id="mapView" ng-show = "fc.view == 'map'"></div>
+      </div>
+
+      <div class="no-record" ng-show = "fc.nearByCustomers.length == 0" ng-cloak>No customers found within given range</div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDf45YZxX175P2_hNEEXdyNyY-cIgz-ZNs"></script>
+    <script src="js/map_render.js" type="text/javascript"></script>
+    <script src="js/geo_distance.js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+  </body>
+</html>

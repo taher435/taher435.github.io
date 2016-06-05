@@ -1,0 +1,152 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px; /* root font size */
+  color: #333333;
+}
+/* using "Perfect Forth" scale from http://type-scale.com/ */
+h3{
+  font-size: 1.777em;
+}
+h4{
+  font-size: 1.333em;
+}
+p{
+  font-size: 1em;
+}
+h3, h4, p{
+  margin: 0;
+}
+input:focus{
+  outline: none;
+}
+.container{
+  width: 320px;
+  margin: 50px auto;
+}
+.container h3, .container h4, .container p{
+  text-align: center;
+}
+.container h3{
+  margin-bottom: 5px;
+}
+.container h4{
+  margin-top: 20px;
+}
+.nl-form{
+  padding: 1rem;
+  margin: 3rem auto;
+  text-align: center;
+}
+.nl-form .statement{
+  margin-bottom: 1.33rem;
+}
+.nl-form input[type="text"], input[type="number"]{
+  height: 2rem;
+  border: 0;
+  border-bottom: 1px dashed #1e1e1e;
+  text-align: center;
+}
+
+.btn{
+  /*intercom button style*/
+  background: -webkit-linear-gradient(top, #1f8ded 0%, #1985e3 100%);
+  background: linear-gradient(to bottom, #1f8ded 0%, #1985e3 100%);
+  border: 1px solid #1271c4;
+  padding: 6px 10px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.btn[disabled]{
+  background: #efefef;
+  cursor: not-allowed;
+  color: #979797;
+  border: 1px solid #d8d8d8;
+}
+
+.file-upload{
+  visibility: hidden;
+  width: 0;
+}
+
+.pills{
+  list-style-type: none;
+  width: 100%;
+  text-align: center;
+  display: table;
+  padding: 0;
+}
+
+.pills li{
+  display: table-cell;
+  padding: 0.5rem 0.33rem;
+  border: 1px solid #d8d8d8;
+  border-right-width: 0;
+  cursor:
+}
+.pills li.active{
+  background: #1985e3;
+  color: #ffffff;
+}
+.pills li:first-child{
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.pills li:last-child{
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-right-width: 1px;
+}
+.pills li a, .pills li a:link, .pills li a:hover, .pills li a:visited{
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  width: 100%;
+}
+
+.customer-list{
+  margin: 0.75rem 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.customer-list li{
+  margin: 0.5rem 0;
+  padding: 1.2rem 0.5rem;
+  border: 1px solid #d8d8d8;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.customer-list li h4{
+  margin: 0;
+}
+
+.no-record{
+  color: #E6525A;
+  text-align: center;
+}
+
+.help-text{
+  font-size: 0.75em;
+}
+
+#mapView{
+  width: 320px;
+  height: 320px;
+  margin: auto;
+}
+
+@media only screen and (min-width: 640px){
+  .container{
+    width: 640px;
+  }
+  #mapView{
+    width: 600px;
+    height: 450px;
+  }
+}
