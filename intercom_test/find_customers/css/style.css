@@ -131,6 +131,11 @@ input:focus{
   text-align: center;
 }
 
+.error-messages div{
+  text-align: center;
+  color: #E6525A;
+}
+
 .help-text{
   font-size: 0.75em;
 }

@@ -2,10 +2,10 @@ var findCustApp = angular.module("findCustApp", []);
 
 findCustApp.controller("findCustController", ["$scope", function($scope){
   var fc = this;
-  
+
   fc.init = function(){
-    fc.baseLat = 53.3381985;
-    fc.baseLong = -6.2592576;
+    fc.baseLat = 53.3381985; //intercom dublin office latitude
+    fc.baseLong = -6.2592576; //intercom dublin office longitude
     fc.rangeKms = 100;
     fc.customers = [];
     fc.nearByCustomers = null;
@@ -20,19 +20,28 @@ findCustApp.controller("findCustController", ["$scope", function($scope){
     var range = parseFloat(fc.rangeKms);
 
     if(fc.customers && fc.customers.length > 0){
+
       $.each(fc.customers, function(index, customer){
         var distanceFromBase = calculateGeoDistance(fromLat, fromLong, parseFloat(customer.latitude), parseFloat(customer.longitude));
         if(distanceFromBase <= range){
-          fc.nearByCustomers.push({
-            name: customer.name,
-            user_id: customer.user_id,
-            distance: parseFloat(Math.round(distanceFromBase * 100) / 100).toFixed(2),
-            latitude: customer.latitude,
-            longitude: customer.longitude
-          });
+          try{
+            fc.nearByCustomers.push({
+              name: customer.name,
+              user_id: customer.user_id,
+              distance: parseFloat(Math.round(distanceFromBase * 100) / 100).toFixed(2), //rounding up to two decimal places
+              latitude: customer.latitude,
+              longitude: customer.longitude
+            });
+          }catch(e){
+            //skipping to next record if we find an invalid customer record
+            console.log("Error reading customer data. Object = " + JSON.stringify(customer));
+            //TODO: see how can we better log this and show error on screen.
+          }
         }
       });
       fc.showListView();
+    }else{
+
     }
   };
 
@@ -64,10 +73,23 @@ findCustApp.controller("findCustController", ["$scope", function($scope){
       $scope.$apply(function () {
           var reader = new FileReader();
 
-          reader.onload = function(event){
-            fc.customers = JSON.parse(event.target.result);
-
-          }; //this function will be called when we read data (below line)
+          reader.onload = function(event){ //this function will be called when we read data (below line)
+            try{
+              fc.customers = JSON.parse(event.target.result);
+              $scope.$apply(function(){
+                fc.invalidJsonError = false; //we need this $apply block to immediately show the error message
+                //ideally, the outer $scope.$apply should work, but not sure why its not working.
+                //TODO: see if we can avoid nested $apply
+              });
+            }catch(e){
+                console.log(e.message);
+                $scope.$apply(function(){
+                  fc.invalidJsonError = true;
+                  fc.fileName = null;
+                  fc.nearByCustomers = null; //this is required to remove the results from a previously uploaded file.
+                });
+            }
+          };
 
           fc.fileName = args.file.name;
           reader.readAsText(args.file);

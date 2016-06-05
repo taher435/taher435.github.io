@@ -17,7 +17,7 @@
         <div class="statement">
           <input type="text" ng-model = "fc.fileName" disabled />
           <label class="btn">
-              Browse <input class="file-upload" name="fileCustomers" id="fileCustomers" type="file" file-upload required />
+              Browse <input class="file-upload" name="fileCustomers" id="fileCustomers" type="file" accept=".json" file-upload required />
           </label>
           <input type="hidden" name="fileName" ng-model="fc.fileName" required />
         </div>
@@ -31,6 +31,10 @@
         <input type="button" class="btn" id="btnSubmit" ng-disabled="findCustForm.$invalid" ng-click="fc.getNearByCustomers()" value="Find"/>
 
       </form>
+
+      <div class="error-messages">
+        <div ng-if = "fc.invalidJsonError">Looks like there is some issue with the JSON file you uploaded. Please use a valid JSON</div>
+      </div>
 
       <div class="result" ng-show = "fc.view != null && fc.nearByCustomers.length > 0" ng-cloak>
         <p><b>Customers found = {{fc.nearByCustomers.length}}</b></p>
@@ -46,6 +50,9 @@
       </div>
 
       <div class="no-record" ng-show = "fc.nearByCustomers.length == 0" ng-cloak>No customers found within given range</div>
+
+
+
 
     </div>
 
