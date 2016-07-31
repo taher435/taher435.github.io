@@ -15,7 +15,7 @@ permalink: setting-up-ruby-on-rails-with-passenger-and-apache-on-ubuntu
 2. `\curl -sSL https://get.rvm.io | bash -s`
 3. `logout and login again (close the terminal and open it again)`
 4. type this on the terminal window : `source ~/.rvm/scripts/rvm`
-5. Check if RVM was installed properly, type : `rvm | head -n 1` (output should be "rvm is a function")
+5. Check if RVM was installed properly, type : `rvm | head -n 1` (output should be "=rvm")
 6. `rvm install 2.2`
 7. `rvm use 2.2`
 8. `sudo apt-get install nodejs`
