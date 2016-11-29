@@ -4,11 +4,12 @@ title: About me
 permalink: /about/
 ---
 
-I am a full stack web / mobile developer building applications for around **8 years** now. I work with,
+I am a full stack web / mobile developer building applications for  **8+ years** now. I work with,
 
 * Ruby on Rails
 * C#.net
 * NodeJS
+* ReactJS
 * AngularJS
 * Ionic (hybrid mobile app development)
 * ASP.net MVC
@@ -17,6 +18,7 @@ I am a full stack web / mobile developer building applications for around **8 ye
 * JavaScript / jQuery
 * MongoDB
 * MySQL
+* PostgreSQL
 * MS SQL Server
 * Wordpress, LocomotiveCMS
 * AWS, SoftLayer, Azure, Google Compute Engine
@@ -28,7 +30,7 @@ I am a start up enthusiast and love helping different technology start ups with,
 * Scale up from p/m fit
 * Building and maintaining the infrastructure
 
-I am currently working as a CTO at <a href="http://cialfogroup.com" target="_blank">CIALFO</a>. We are building a platform to make college application process easy, efficient and accessible.
+I am currently working as a Senior Engineer at <a href="https://honestbee.sg" target="_blank">honestbee</a>. We are building a on demand platform for groceries, laundry and food.
 
 ### Contact me
 
