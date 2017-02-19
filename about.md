@@ -7,6 +7,7 @@ permalink: /about/
 I am a full stack web / mobile developer building applications for  **8+ years** now. I work with,
 
 * Ruby on Rails
+* Elixir
 * C#.net
 * NodeJS
 * ReactJS
