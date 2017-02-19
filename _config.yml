@@ -15,17 +15,17 @@ enforce_ssl: true
 harmony:
   name: Taher Dhilawala
   # Little description about your site
-  description: Full stack web and mobile developer.
+  description: Full stack developer | Startup enthusiast.
   # 'meta_description:' Write an awesome description for your new site here.
   # It will appear in your document head meta (for Google search results) and
   # in your feed.xml site description.
   meta_description: > #
    Taher is a full stack web and mobile developer. A start up enthusiast.
-   He has around 8 years of experience working with various technology stack.
-  basetheme: theme-base-01 # pre defined thmes are darken, blue-water, redish.
+   He has 8+ years of experience working with various technology stack.
+  basetheme: darken # pre defined thmes are darken, blue-water, redish.
   author: # Author details
     name: Taher Dhilawala
-    #email:
+    email: hello@taher.me
     url: http://taher435.github.io
 
   # Google Analytics key, leave blank to ignore
