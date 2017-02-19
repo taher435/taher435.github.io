@@ -17,11 +17,18 @@ post: true
     	{{ page.date | date: "%b %-d, %Y" }}
 	    </span>
 		</p>
-		<div class="post">
+		<article class="post">
 			{{ content }}
-		</div>
+		</article>
+		{% if page.canonical_url %}
+		<p class="canonical-reference">
+			Originally posted at
+			<a href="{{page.canonical_url}}" target="_blank">
+				{{ page.canonical_url | remove:'http://' | remove:'https://' | split:'/' | first }}
+			</a>
+		</p>
+		{% endif %}
 	</div>
-
 
 	{% if site.related_posts %}
 	<div class="related">
