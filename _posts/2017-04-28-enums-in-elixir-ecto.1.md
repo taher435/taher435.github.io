@@ -9,6 +9,7 @@ status: publish
 categories: [elixir]
 permalink: using-rails-like-enum-in-elixir
 canonical_url: http://tech.honestbee.com/articles/elixir/2017-04/enums-in-elixir-ecto
+comments: true
 ---
 
 At honestbee, most of the projects are done in Rails and so majority of us here are Rubyist. When I first started working with Elixir, almost all of initial Google searches where like "Rails X equivalent in Elixir". To my surprise, there are a lot of people like me :).

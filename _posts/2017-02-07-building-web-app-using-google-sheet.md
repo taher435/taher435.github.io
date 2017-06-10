@@ -9,6 +9,7 @@ status: publish
 categories: [mvp, google-sheet, google-scripts]
 permalink: building-a-web-app-using-google-sheets
 canonical_url: http://tech.honestbee.com/articles/integrations/2017-02/building-web-app-using-google-sheet
+comments: true
 ---
 
 I am sure we all use and love Google Sheets. But I think very few know that we can actually build a small web application on top of Google Sheets (leveraging Google cloud infrastructure) using [Google App Scripts](https://developers.google.com/apps-script/)

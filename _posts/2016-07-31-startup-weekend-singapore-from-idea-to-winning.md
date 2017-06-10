@@ -8,6 +8,7 @@ published: true
 status: publish
 categories: [startups]
 permalink: startup-singapore-from-idea-to-winning
+comments: true
 ---
 
 ![winning-team](/assets/post-images/20160731/cover.jpeg)

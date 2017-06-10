@@ -8,6 +8,7 @@ published: true
 status: publish
 categories: [startups]
 permalink: things-to-consider-for-non-tech-startup-founders
+comments: true
 ---
 
 The beauty of Internet businesses these days is that one can easily start without needing much investment. There are tons of resources that will help you get started in no time. However, I still see some of the non-tech founders struggle with getting their product up and running. Even if they do, there are a lot of things they don't know or they get it wrong. 

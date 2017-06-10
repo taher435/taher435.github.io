@@ -61,4 +61,10 @@ post: true
 			{% endif %}
 		</div>
 	</div>
+
+	{% if site.harmony.disqus_shortname and page.comments == true %}
+		<div class="comments">
+			{% include disqus.html %}
+        </div>
+	{% endif %}
 </div>
