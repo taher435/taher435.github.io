@@ -7,7 +7,6 @@ published: true
 status: publish
 categories: [sql server, udf]
 permalink: getting-file-name-from-full-file-path-in-sql-server-udf
-id: 20111112004807
 ---
 Today at office I got a task which had a table with image URLs in one of the column. The image URLs were a network path. I had to write a script to identify the image name (file name) and then update it with a web URL for the same image. I needed a function which would give me file name when given a file path. As you must know, such type of things is very easy in C#. But in SQL Server we do not have any in built function to do this. So I wrote a function of my own. Below is what I wrote and also showing how to use it. The script is self explanatory I believe :)
 
@@ -45,6 +44,6 @@ Today at office I got a task which had a table with image URLs in one of the col
 
 The out put is as shown below
 
-![output](/assets/post-images/{{ page.id }}/output.png)
+![output](/assets/post-images/20111112004807/output.png)
 
 Hope it helps!
