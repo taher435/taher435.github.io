@@ -4,23 +4,15 @@ title: About me
 permalink: /about/
 ---
 
-I am a full stack web / mobile developer building applications for  **8+ years** now. I work with,
+I am a full stack developer with 9+ years of experience in building applications for web, mobile along with DevOps. I work with,
 
-`Ruby on Rails`, `Elixir`, `C#.net`, `ASP.net MVC`   
-
-
-`NodeJS`, `ReactJS`, `AngularJS`    
-
-
-`Ionic (hybrid mobile app development)`   
-
-`HTML 5`, `CSS3`, `JavaScript / jQuery`   
-
-`MongoDB`, `MySQL`, `PostgreSQL`, `MS SQL Server`   
-
-`Wordpress`, `LocomotiveCMS`   
-
-`AWS`, `SoftLayer`, `Azure`, `Google Compute Engine`
+Languages: `Java`, `C#`, `Ruby`, `Elixir`, `JavaScript`
+Frameworks/Platforms: `Spring MVC`, `Ruby on Rails`, `ASP.net MVC`, `Phoenix Framework (Elixir)`, `NodeJS`
+Database: `PostgreSQL`, `MongoDB`, `MySQL`, `MS SQL Server`
+Web/Mobile: `AngularJS 2+`, `ReactJS`, `Ionic Framework`, `React Native`, `jQueyr`, `HTML/CSS`, `SASS`
+`Ionic (hybrid mobile app development)`
+CMS: `Wordpress`, `LocomotiveCMS`
+DevOps: `Kubernetes`, `Terraform`, `AWS`, `Azure`, `IBM Softlayer`, `Google Compute Engine`
 
 I am a start up enthusiast and love helping different technology start ups with,
 
@@ -29,13 +21,12 @@ I am a start up enthusiast and love helping different technology start ups with,
 * Scale up from p/m fit
 * Building and maintaining the infrastructure
 
-I am currently working as a Senior Software Engineer at <a href="https://honestbee.sg" target="_blank">honestbee</a>. We are building a on demand platform for groceries, laundry and food.
+I am currently part of a small team at <a href="http://www.galendata.com/" target="_blank">Galen Data Inc.</a>.
 
 ### Contact me
 
-Find me on  [LinkedIn][linkedIn] / [Twitter][Twitter] / [Github][github]. I occasionally answer questions on [Wiselike][wiselike]
+Find me on  [LinkedIn][linkedIn] / [Twitter][Twitter] / [Github][github].
 
-[linkedIn]: https://sg.linkedin.com/in/tahernd
+[linkedIn]: https://www.linkedin.com/in/tahernd/
 [github]: https://github.com/taher435
 [twitter]: https://twitter.com/taher435
-[wiselike]: https://wiselike.com/taher-dhilawala
