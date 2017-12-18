@@ -16,7 +16,7 @@ I am a full stack developer with 9+ years of experience in building applications
 `PostgreSQL`, `MongoDB`, `MySQL`, `MS SQL Server`
 
 ##### Web/Mobile
-`AngularJS 2+`, `ReactJS`, `Ionic Framework`, `React Native`, `jQueyr`, `HTML/CSS`, `SASS`, `Ionic (hybrid mobile app development)`
+`AngularJS 2+`, `ReactJS`, `Ionic Framework`, `React Native`, `jQuery`, `HTML/CSS`, `SASS`, `Ionic (hybrid mobile app development)`
 
 ##### DevOps
 `Kubernetes`, `Terraform`, `AWS`, `Azure`, `IBM Softlayer`, `Google Compute Engine`
@@ -31,7 +31,7 @@ I am a start up enthusiast and love helping different technology start ups with,
 * Scale up from p/m fit
 * Building and maintaining the infrastructure
 
-I am currently part of a small early stage start <a href="http://www.galendata.com/" target="_blank">Galen Data Inc.</a>.
+I am currently part of an early stage start <a href="http://www.galendata.com/" target="_blank">Galen Data Inc.</a>
 
 ### Resume
 
