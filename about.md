@@ -7,11 +7,16 @@ permalink: /about/
 I am a full stack developer with 9+ years of experience in building applications for web, mobile along with DevOps. I work with,
 
 Languages: `Java`, `C#`, `Ruby`, `Elixir`, `JavaScript`
+
 Frameworks/Platforms: `Spring MVC`, `Ruby on Rails`, `ASP.net MVC`, `Phoenix Framework (Elixir)`, `NodeJS`
+
 Database: `PostgreSQL`, `MongoDB`, `MySQL`, `MS SQL Server`
+
 Web/Mobile: `AngularJS 2+`, `ReactJS`, `Ionic Framework`, `React Native`, `jQueyr`, `HTML/CSS`, `SASS`
 `Ionic (hybrid mobile app development)`
+
 CMS: `Wordpress`, `LocomotiveCMS`
+
 DevOps: `Kubernetes`, `Terraform`, `AWS`, `Azure`, `IBM Softlayer`, `Google Compute Engine`
 
 I am a start up enthusiast and love helping different technology start ups with,
