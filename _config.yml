@@ -31,6 +31,9 @@ harmony:
   # Google Analytics key, leave blank to ignore
   google_analytics_key: UA-73710862-1
 
+  # Google Adsense account key, leave blank to ignore
+  google_adsense_account_key: ca-pub-6606254499964366
+
   # Disqus name created to blog
   disqus_shortname: taher435
 
