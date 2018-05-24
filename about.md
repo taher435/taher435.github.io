@@ -16,7 +16,7 @@ I am a full stack developer with 9+ years of experience in building applications
 `PostgreSQL`, `MongoDB`, `MySQL`, `MS SQL Server`
 
 ##### Web/Mobile
-`AngularJS 2+`, `ReactJS`, `Ionic Framework`, `React Native`, `jQuery`, `HTML/CSS`, `SASS`, `Ionic (hybrid mobile app development)`
+`Angular 2+`, `ReactJS`, `Ionic Framework`, `React Native`, `jQuery`, `HTML/CSS`, `SASS`, `Ionic (hybrid mobile app development)`
 
 ##### DevOps
 `Kubernetes`, `Terraform`, `AWS`, `Azure`, `IBM Softlayer`, `Google Compute Engine`
@@ -35,7 +35,7 @@ I am currently part of an early stage start <a href="http://www.galendata.com/" 
 
 ### Resume
 
-[Taher Dhilawala - Resume (PDF)][resume]
+<a href="/assets/resume.pdf" target="_blank">Taher Dhilawala - Resume (PDF)</a>
 
 ### Contact me
 
@@ -44,6 +44,5 @@ Find me on  [LinkedIn][linkedIn] / [Twitter][Twitter] / [Github][github].
 [linkedIn]: https://www.linkedin.com/in/tahernd/
 [github]: https://github.com/taher435
 [twitter]: https://twitter.com/taher435
-[resume]: https://www.dropbox.com/s/h2d6drww4ub57rz/Taher%20Dhilawala.pdf?dl=0
 
 
