@@ -35,7 +35,7 @@ I am currently part of an early stage start <a href="http://www.galendata.com/" 
 
 ### Resume
 
-<a href="/assets/resume.pdf" target="_blank">Taher Dhilawala - Resume (PDF)</a>
+<a href="/assets/docs/resume.pdf" target="_blank">Taher Dhilawala - Resume (PDF)</a>
 
 ### Contact me
 
