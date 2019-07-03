@@ -13,6 +13,8 @@ comments: true
 
 ![winning-team](/assets/post-images/20160731/cover.jpeg)
 
+> Note: We also won 1st prize in Startup Weekend Singapore 2017 :). We followed the same principles and that helped us win second time in a row. Though the team was different (except Mohammed & myself)
+
 For those who don’t know, [startup weekend](https://startupweekend.org/) is an event where you get 54 hours on a weekend to build your product. In this year’s event in Singapore, my team won the 1st prize! When the judges announced our team as the winner, we all were surprised. Because none of us were there to win. All we wanted to do is build a prototype for a problem we all faced. When we won, it got me thinking that why did the judges chose us. So I came up with these points that we think helped us win and in general is also applicable to any startup or product.
 
 ## 1. Solving your own problem
@@ -32,5 +34,3 @@ We knew that what we are doing may not seem like a big billion dollar idea to th
 ## 5. A great team
 We were lucky to find the perfect team of 1 entrepreneur ([Idir Hillali](https://www.linkedin.com/in/idirh/)), 1 hustler ([Alex Silaev](https://www.linkedin.com/in/alexsilaev/)), 1 mobile app developer ([Amos Choo](https://www.linkedin.com/in/amos-choo-82baa9b1/)), 1 designer ([Mohammed Pitolwala](https://www.linkedin.com/in/mohammedsp/)) and 1 full stack developer ([me](https://www.linkedin.com/in/tahernd)). We all had very clear roles since the start and did not waste any time in deciding who will do what. It is a proven fact that with the right people you can do wonders. I guess we had the right team and it did help us win the 1st prize.
 If you are going for a hackathon or a startup weekend in your city, keep these things in mind and hopefully it will help you win. See you next year in Startup Weekend Singapore 2017
-
-> Note: We also won 1st prize in Startup Weekend Singapore 2017 :). We followed the same principles and that helped us win second time in a row. Though the team was different (except Mohammed & myself)
