@@ -12,16 +12,16 @@ comments: true
 ---
 ![alt](/assets/post-images/20200619/parallel.png)
 
-At [Galen Data](http://galendata.com) we run out CI on Bitbucket Pipelines. We use Angular as our frontend framework. Over the time, our Angular frontend app grew bigger and so did our unit tests. As of today, we have around 4000+ unit tests. Running all the tests on our CI takes around 4-6 mins. Some would says that it's not that bad. However, we wanted to make it a bit faster.
+At [Galen Data](http://galendata.com), we run out CI on Bitbucket Pipelines. We use Angular as our frontend framework. Over time, our Angular frontend app grew bigger, and so did our unit tests. As of today, we have around 4000+ unit tests. Running all the tests on our CI takes about 4-6 mins. Some would say that it's not that bad. However, we wanted to make it a bit faster.
 
 Angular uses jasmine and karma for executing unit tests. [Karma](https://karma-runner.github.io/latest/index.html) is the executor that runs the test on an actual browser. Karma relies on a configuration file `karma.conf` that should already be present in your Angular app (if you created the project using the `ng new` command).
 
-By default, karma runs all the tests serially. However, there is an NPM package [karma-parallel](https://www.npmjs.com/package/karma-parallel) which can run the tests in a distributed manner. In it's default setting, it creates browser instances equal to `CPU core count - 1` and divided the tests equally among the instances.
+By default, karma runs all the tests serially. However, there is an NPM package [karma-parallel](https://www.npmjs.com/package/karma-parallel) that can run the tests in a distributed manner. In its default setting, it creates browser instances equal to `CPU core count - 1` and divided the tests equally among the instances.
 
-Running parallel tests in your local machine is pretty straightforward. Just follow the setup instructions on the karma-parallel NPM package and you are good to go. To run them on a CI instance  (like Bitbucket Pipeline) you have to make some changes in the configuration to get it working.
+Running parallel tests in your local machine is pretty straightforward. Just follow the setup instructions on the karma-parallel NPM package, and you are good to go. To run them on a CI instance  (like Bitbucket Pipeline), you have to make some changes in the configuration to get it working.
 
 ### Headless Browser
-When you run an angular test with karma, it will open up a browser window and you will it running your tests on the application. In a CI, things are different as there is no UI. For that, you will have to use an headless browser. Chrome is one of the most used browser for testing with Angular. You can setup your CI to use a docker image that has a headless chrome installed. You can use this [docker image](https://hub.docker.com/r/galencloud/node-angular-chrome) in your bitbucket pipeline yml file.
+When you run an angular test with karma, it will open up a browser window and you will it running your tests on the application. In a CI, things are different as there is no UI. For that, you will have to use a headless browser. Chrome is one of the most used browsers for testing with Angular. You can set up your CI to use a docker image that has a headless chrome installed. You can use this [docker image](https://hub.docker.com/r/galencloud/node-angular-chrome) in your bitbucket pipeline yml file.
 
 ### Karma Config
 
@@ -42,7 +42,7 @@ Note: If you are running this on a CI which usually runs on a shared instance, i
 
 You can find additional options on the [official NPM package page](https://www.npmjs.com/package/karma-parallel#additional-configuration).
 
-As per the documentation, this is enough to make it work. However, when running tests with this config on bitbucket pipeline (or any headless browser environment) you will face any issue. You will most likely get a similar error
+As per the documentation, this is enough to make it work. However, when running tests with this config on bitbucket pipeline (or any headless browser environment) you will face an issue. You will most likely get a similar error
 
 ```
 Nacl helper process running without a sandbox
@@ -56,7 +56,7 @@ browsers: ['ChromeHeadless']
 
 Most answers on SO and other forums will suggest you to run Chrome on linux with `--no-sandbox` option. But, we tried that and it did not help.
 
-After setting up `karma-parallel` our testing time was reduced to under 2 minutes (from 4 minutes).
+After setting up `karma-parallel`, our testing time reduced to under 2 minutes (from 4 minutes).
 
 Happy coding!
 
