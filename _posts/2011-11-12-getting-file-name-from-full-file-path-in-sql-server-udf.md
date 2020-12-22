@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Getting file name from full file path in SQL Server - UDF
+excerpt: SQL function that gives a filename when given a full filepath. Quite handy when dealing with file path manipulation.
 date: 2011-11-12 00:48:07.000000000 +08:00
 type: post
 published: true

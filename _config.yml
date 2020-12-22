@@ -1,70 +1,61 @@
-# Harmony Jekyll theme general configurations
+title: Taher Dhilawala
+author: Taher Dhilawala
+email: hello@taher.me
+description: > # this means to ignore newlines until "show_exerpts:"
+  Full stack web and mobile developer cum architect with **12+ years** of experience in building applications for scale,
+  architecting low level and high level designs and building and mentoring software engineering teams.
 
-# Base URL
-baseurl:
+show_excerpts: true # set to true to show excerpts on the homepage
 
-# Site live URL
-url: https://taher.me
-
-# Localhost
-# url: http://localhost:4000
-
-# Harmony theme configuration. Please change accordingly.
-harmony:
-  name: Taher Dhilawala
-  # Little description about your site
-  description: Full stack developer | Startup enthusiast.
-  # 'meta_description:' Write an awesome description for your new site here.
-  # It will appear in your document head meta (for Google search results) and
-  # in your feed.xml site description.
-  meta_description: > #
-   Taher is a full stack web and mobile developer. A start up enthusiast.
-   He has 8+ years of experience working with various technology stack.
-  basetheme: darken # pre defined thmes are darken, blue-water, redish.
-  author: # Author details
-    name: Taher Dhilawala
-    email: hello@taher.me
-    url: https://taher.me
-
-  # Google Analytics key, leave blank to ignore
-  google_analytics_key: UA-73710862-1
-
-  # Google Adsense account key, leave blank to ignore
-  google_adsense_account_key: ca-pub-6606254499964366
-
-  # Disqus name created to blog
-  disqus_shortname: taher435
-
-  # Profile links, leave blank to ignore
-  social:
-    linkedin: https://sg.linkedin.com/in/tahernd
-    github: taher435
-    twitter: taher435
-    #facebook: gayanvirajith
-    #gplus: +GayanVirajith
-    #dribble: gayan
-    #pinterest:
-  # Toggle disclaimer in footer
-  show_disclaimer: false
-
-# Conversion / Build settings
-markdown:    kramdown
-
-highlighter: rouge #pygments
-
-# Permalinks
-permalink:        pretty
-
-exclude:
-  - CNAME
-  - Gemfile
-  - Rakefile
-  - README.md
-  - .gitignore
-  - .sass-cache
-  - Gemfile.lock
-
-# Sass conversion configs
+# Minima date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 sass:
-    sass_dir: assets/css/_sass
-    style: :compressed
+  sass_dir: _sass
+plainwhite:
+  name: Taher Dhilawala
+  tagline: Full stack developer
+  date_format: "%b %-d, %Y"
+  sitemap: true # set to true to generate sitemap.xml content
+  search: true # set to true to enable searchbar
+  dark_mode: false # set to true to add dark mode toggle
+  portfolio_image: "assets/profile.png" # the path from the base directory of the site to the image to display (no / at the start)
+  html_lang: "en" # set the lang attribute of the <html> tag for the pages. See here for a list of codes: https://www.w3schools.com/tags/ref_country_codes.asp
+  condensed_mobile:
+    #- home
+    - page
+    - post
+  disqus_shortname: taher435
+  # generate social links in footer
+  social_links:
+    # twitter: samarsault
+    github:  taher435
+    linkedIn: in/tahernd
+    #rss: rss
+    #dribbble: jekyll
+    #flickr:   jekyll
+    #instagram: jekyll
+    #pinterest: jekyll
+    #youtube: jekyll
+    #facebook: jekyll
+    #soundcloud: jekyll
+    #telegram: jekyll
+    #gitlab: jekyll
+
+    # Mastodon instances
+    # mastodon:
+    # - username: jekyll
+    #   instance: example.com
+    # - username: jekyll2
+    #   instance: example.com
+
+# If you want to link only specific pages in your header, uncomment
+# this and add the path to the pages in order as they should show up
+#header_pages:
+# - about.md
+
+# Build settings
+theme: plainwhite
+
+plugins:
+  - jekyll-seo-tag
+#  - jekyll-feed

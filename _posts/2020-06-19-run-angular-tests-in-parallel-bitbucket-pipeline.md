@@ -29,7 +29,7 @@ When you run an angular test with karma, it will open up a browser window and yo
 
 Once you install the `karma-parellel` npm package, edit your `karma.conf` file to add the parallel config,
 
-```
+```json
 frameworks: ['parallel', 'jasmine']
 plugins: [
   require('karma-parallel')
@@ -52,7 +52,7 @@ Nacl helper process running without a sandbox
 
 To fix this, just replace the `Chrome` browser in your karma config with `ChromeHeadless`,
 
-```
+```json
 browsers: ['ChromeHeadless']
 ```
 

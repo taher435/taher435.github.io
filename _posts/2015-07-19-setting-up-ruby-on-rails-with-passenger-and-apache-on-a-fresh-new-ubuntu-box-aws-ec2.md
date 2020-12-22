@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Setting up Ruby on Rails with Passenger and Apache on a fresh new Ubuntu Box
+excerpt: Step by step guide on setting up RoR on a fresh new Ubuntu box.
 date: 2015-07-19 22:16:39.000000000 +08:00
 type: post
 published: true
