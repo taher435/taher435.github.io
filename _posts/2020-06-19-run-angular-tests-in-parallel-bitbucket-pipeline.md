@@ -3,7 +3,7 @@ layout: post
 title:  "Run Angular tests in parallel on Bitbcuket Pipeline (CI)"
 excerpt: "Setup karma parallel on Bitbucket CI pipeline to run Angular tests in parallel."
 meta_description: "Setup karma parallel on Bitbucket CI pipeline to run Angular tests in parallel."
-date:   2020-06-19 11:00:00 +0530
+date:   2020-06-19 11:30:00 +0530
 type: post
 published: true
 status: publish
