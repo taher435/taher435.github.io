@@ -33,6 +33,12 @@ db.collection.aggregate([
 ])
 ```
 
+Now, we need to sort all records them in ascending order by value. Remember, the median is calculated by sorting the values and then picking up the value that is at the midpoint.
+
+```
+{ "$sort": { "value": 1 } } // 1 is ascending and -1 would be descending
+```
+
 Next, we will group the data and collect all the values of the required property into an array (you will later understand why we need this)
 
 ```
@@ -46,11 +52,7 @@ Next, we will group the data and collect all the values of the required property
 }
 ```
 
-Once we have all the values (`$value`) in an array, we need to sort them in ascending order. Remember, the median is calculated by sorting the values and then picking up the value that is at the midpoint.
 
-```
-{ "$sort": { "value": 1 } } // 1 is ascending and -1 would be descending
-```
 
 To find the midpoint i.e. the element in the center of the array, we need to find its index. To find the index, we need to first find the length of the array. For that, we will use `$project` operation and project our data to include an array size property
 

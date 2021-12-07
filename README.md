@@ -1,10 +1,6 @@
-# plainwhite
+# Personal website
 
-Simplistic jekyll portfolio-style theme for writers.
-
-**Demo**: [samarsault.com](https://samarsault.com)
-
-![plainwhite theme preview](/screenshot.png)
+**Demo**: [taher.me](https://taher.me)
 
 ## Installation on Github Pages
 
@@ -158,9 +154,9 @@ Tagline can be multiline in this way
 ```yaml
 plainwhite:
   tagline: |
-  First Line. 
+  First Line.
 
-  Second Line. 
+  Second Line.
 
   Third Line.
 ```
@@ -209,7 +205,7 @@ When your theme is released, only the files in `_layouts`, `_includes`, `_sass` 
 To add a custom directory to your theme-gem, please edit the regexp in `plainwhite.gemspec` accordingly.
 
 ## Donation
-If this project help you reduce time to develop, you can give me a cup of coffee :) 
+If this project help you reduce time to develop, you can give me a cup of coffee :)
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/thelehhman)
 
