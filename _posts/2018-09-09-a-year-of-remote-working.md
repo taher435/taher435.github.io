@@ -11,7 +11,9 @@ permalink: a-year-of-remote-working
 comments: true
 ---
 
-![alt](/assets/post-images/20180909/astronaut-working.jpg)
+<div style="text-align:center; margin-top: 15px;">
+  <img style="width: 100%" src="/assets/post-images/20180909/astronaut-working.jpg" alt="Remote working" title="Remote working" />
+</div>
 
 It's been almost a year since I started working as a remote Software Developer for a startup called [Galen Data](http://galendata.com) based in Houston, TX, USA. And, I must admit, it has been one of the best thing that happened to me in my entire career.
 

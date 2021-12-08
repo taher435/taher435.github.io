@@ -10,7 +10,6 @@ status: publish
 categories: [mongodb, mongo aggregation, database]
 permalink: find-median-with-mongo-aggregation
 comments: true
-cover_image: "/assets/post-images/20210108/mongo-pipeline.png"
 ---
 <div style="text-align:center; margin-top: 15px;">
   <img src="/assets/post-images/20210108/mongo-pipeline.png" alt="MongoDB pipeline" title="MongoDB pipeline" />

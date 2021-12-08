@@ -10,9 +10,10 @@ status: publish
 categories: [continuous-integration, angular, karma, bitbucket]
 permalink: run-angular-test-in-parallel-on-bitbucket-pipeline
 comments: true
-cover_image: "/assets/post-images/20200619/parallel.png"
 ---
-![alt](/assets/post-images/20200619/parallel.png)
+<div style="text-align:center; margin-top: 15px;">
+  <img src="/assets/post-images/20200619/parallel.png" alt="Run angular tests in parallel" title="Run angular tests in parallel" />
+</div>
 
 At [Galen Data](http://galendata.com), we run out CI on Bitbucket Pipelines. We use Angular as our frontend framework. Over time, our Angular frontend app grew bigger, and so did our unit tests. As of today, we have around 4000+ unit tests. Running all the tests on our CI takes about 4-6 mins. Some would say that it's not that bad. However, we wanted to make it a bit faster.
 
