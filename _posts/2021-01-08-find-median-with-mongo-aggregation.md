@@ -107,8 +107,8 @@ Now that we have the indexes, let's get the actual value from the array
         "valueArray": 1,
         "middlePoint": 1,
         "beginMiddle": 1,
-        "beginValue": { "$arrayElemAt": ["$stepsArray", "$beginMiddle"] },
-        "endValue": { "$arrayElemAt": ["$stepsArray", "$endMiddle"] },
+        "beginValue": { "$arrayElemAt": ["$valueArray", "$beginMiddle"] },
+        "endValue": { "$arrayElemAt": ["$valueArray", "$endMiddle"] },
         "isEvenLength": 1
     }
 }
@@ -142,7 +142,7 @@ and finally, based on the length of the array, we get the median value
             "$cond": {
                 if: "$isEvenLength",
                 then: { "$divide": ["$middleSum", 2] },
-                else:  { "$arrayElemAt": ["$stepsArray", "$middlePoint"] }
+                else:  { "$arrayElemAt": ["$valueArray", "$middlePoint"] }
             }
         }
     }
@@ -195,8 +195,8 @@ db.collection.aggregate([
           "valueArray": 1,
           "middlePoint": 1,
           "beginMiddle": 1,
-          "beginValue": { "$arrayElemAt": ["$stepsArray", "$beginMiddle"] },
-          "endValue": { "$arrayElemAt": ["$stepsArray", "$endMiddle"] },
+          "beginValue": { "$arrayElemAt": ["$valueArray", "$beginMiddle"] },
+          "endValue": { "$arrayElemAt": ["$valueArray", "$endMiddle"] },
           "isEvenLength": 1
       }
   },
@@ -220,7 +220,7 @@ db.collection.aggregate([
               "$cond": {
                   if: "$isEvenLength",
                   then: { "$divide": ["$middleSum", 2] },
-                  else:  { "$arrayElemAt": ["$stepsArray", "$middlePoint"] }
+                  else:  { "$arrayElemAt": ["$valueArray", "$middlePoint"] }
               }
           }
       }
