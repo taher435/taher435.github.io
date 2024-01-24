@@ -24,6 +24,9 @@ plainwhite:
     #- home
     - page
     - post
+  analytics:
+    google:
+      id: G-ZZJPRGB54Q
   disqus_shortname: taher435
   # generate social links in footer
   social_links:
