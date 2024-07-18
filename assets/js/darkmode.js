@@ -30,7 +30,9 @@ function checkDark() {
     checkDarkDone = true;
 }
 
-// const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+console.log('User preference: ', userPrefersDark)
+
 var theme = getCookie('theme');
 if (theme === 'dark') { // (theme === null && userPrefersDark)
     var checkDarkDone = false;
