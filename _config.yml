@@ -2,7 +2,7 @@ title: Taher Dhilawala
 author: Taher Dhilawala
 email: hello@taher.me
 description: > # this means to ignore newlines until "show_exerpts:"
-  Full stack web and mobile developer cum architect with **12+ years** of experience in building applications for scale,
+  Full stack web and mobile lead developer cum architect with **16+ years** of experience in building applications for scale,
   architecting low level and high level designs and building and mentoring software engineering teams.
 
 show_excerpts: true # set to true to show excerpts on the homepage
@@ -13,7 +13,7 @@ sass:
   sass_dir: _sass
 plainwhite:
   name: Taher Dhilawala
-  tagline: Full stack developer
+  tagline: Full stack lead developer
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
   search: true # set to true to enable searchbar
